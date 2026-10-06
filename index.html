@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annamalai Meen Kunju Pannai | Cuddalore No.1</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*{font-family:'Poppins',sans-serif; scroll-behavior:smooth;}
+
+/* MASS ANIMATIONS */
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+@keyframes glow{0%,100%{box-shadow:0 0 20px #facc15}50%{box-shadow:0 0 40px #facc15,0 0 60px #facc15}}
+@keyframes shine{0%{left:-100%}100%{left:100%}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+@keyframes wave{0%,100%{transform:rotate(0)}50%{transform:rotate(5deg)}}
+
+.float{animation:float 2s ease-in-out infinite}
+.glow{animation:glow 1s infinite}
+.pulse{animation:pulse 1s infinite}
+.wave{animation:wave 2s ease-in-out infinite}
+
+/* BUTTON MASS HOVER */
+.btn-mass{
+  position:relative; overflow:hidden;
+  transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275)
+}
+.btn-mass::before{
+  content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.4),transparent);
+  transition:left 0.5s
+}
+.btn-mass:hover::before{left:100%}
+.btn-mass:hover{transform:scale(1.00) translateY(-3px); box-shadow:0 20px 40px rgba(250,204,21,0.6)}
+
+/* CARD MASS HOVER - 3D EFFECT */
+.card-mass{
+  transition:all 0.5s cubic-bezier(0.23,1,0.32,1);
+  position:relative; overflow:hidden
+}
+.card-mass::after{
+  content:''; position:absolute; top:0; left:0; width:100%; height:100%;
+  background:linear-gradient(120deg,transparent 30%,rgba(250,204,21,0.1) 50%,transparent 70%);
+  transform:translateX(-100%); transition:transform 0.6s
+}
+.card-mass:hover::after{transform:translateX(100%)}
+.card-mass:hover{
+  transform:scale(1.00) translateY(-12px) rotateX(5deg);
+  box-shadow:0 25px 50px rgba(0,0,0,0.6),0 0 30px rgba(250,204,21,0.3);
+  border-color:#facc15!important
+}
+.card-mass:hover img{transform:scale(1.00); transition:transform 0.5s}
+.card-mass img{transition:transform 0.5s}
+
+/* NAV LINK HOVER */
+.nav-link{position:relative}
+.nav-link::after{
+  content:''; position:absolute; bottom:-100px; left:0; width:0; height:2px;
+  background:#facc15; transition:width 0.3s
+}
+.nav-link:hover::after{width:100%}
+</style>
+</head>
+<body class="bg-[#020d03] text-white">
+
+<!-- NAVBAR - FIXED + ANIMATED -->
+<nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-yellow-500/20">
+<div class="flex justify-between items-center p-4 px-6 md:px-10">
+<div class="flex items-center gap-3 wave">
+<div class="w-11 h-11 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center text-xl glow">🐟</div>
+<h1 class="font-extrabold text-yellow-400 text-sm leading-tight">Annamalai<br>Meen Kunju Pannai</h1>
+</div>
+<div class="hidden md:flex gap-8 font-semibold text-sm">
+<a href="#home" class="nav-link text-yellow-400">Home</a>
+<a href="#catalog" class="nav-link hover:text-yellow-400 transition">Catalog</a>
+<a href="#farm" class="nav-link hover:text-yellow-400 transition">Farm</a>
+<a href="#location" class="nav-link hover:text-yellow-400 transition">Location</a>
+<a href="#contact" class="nav-link hover:text-yellow-400 transition">Contact</a>
+</div>
+<a href="#contact" class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-2.5 rounded-full font-bold text-sm btn-mass">Get In Touch</a>
+</div>
+</nav>
+
+<!-- HOME - REAL PHOTOS + FLOAT ANIMATIONS -->
+<section id="home" class="min-h-screen flex items-center pt-20 p-6 md:p-16 relative overflow-hidden">
+<div class="absolute top-24 right-10 text-6xl float opacity-20">🐠</div>
+<div class="absolute bottom-20 right-40 text-5xl float opacity-20" style="animation-delay:0.5s">🐟</div>
+<div class="absolute top-40 left-10 text-4xl float opacity-10" style="animation-delay:1s">🌊</div>
+
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center w-full">
+<div>
+<h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+<span class="bg-gradient-to-r from-yellow-200 to-yellow-500 bg-clip-text text-transparent">PREMIUM FISH</span><br>
+<span class="text-yellow-100">FARMING REDEFINED</span>
+</h1>
+<p class="mt-5 text-lg text-green-100/70">Sudamani, Pinnalur,<br> Cuddalore - 10+ Years Trusted</p>
+<p class="mt-3 text-sm text-white/50">We breed 6 premium varieties with Live Guarantee & Door Delivery - REAL FARM PHOTOS</p>
+<div class="mt-8 flex gap-4 flex-wrap">
+<a href="#farm" class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-8 py-4 rounded-full font-extrabold btn-mass pulse">🚀 Explore Real Farm</a>
+<a href="https://wa.me/919344778626" class="border border-yellow-500/40 px-8 py-4 rounded-full font-bold btn-mass hover:bg-yellow-500/10">Shop Live Fish</a>
+</div>
+</div>
+
+<!-- REAL FARM PHOTOS - ANIMATED BOX -->
+<div class="bg-gradient-to-br from-yellow-500/10 to-green-600/10 rounded-[2rem] p-5 backdrop-blur-xl border border-yellow-500/20 card-mass">
+<p class="text-center font-bold text-yellow-400 mb-4">🔥 OUR  FARM - PHOTOS 🔥</p>
+<div class="grid grid-cols-2 gap-3">
+<img src="farm-pond.jpg" class="w-full h-32 object-cover rounded-xl">
+<img src="farm-pond2.jpg" class="w-full h-32 object-cover rounded-xl">
+<img src="delivery.jpg" class="w-full h-32 object-cover rounded-xl">
+<img src="harvesting.jpg" class="w-full h-32 object-cover rounded-xl">
+</div>
+<div class="mt-4 bg-black/50 p-3 rounded-full text-center text-sm font-bold text-yellow-400 border border-yellow-500/20 pulse">6 Varieties - Live Guarantee!</div>
+</div>
+</div>
+</section>
+
+<!-- CATALOG - 6 FISH - MASS HOVER -->
+<section id="catalog" class="p-6 md:p-16 bg-gradient-to-b from-[#020d03] to-green-950/30">
+<h2 class="text-3xl md:text-5xl font-extrabold text-center">OUR <span class="text-yellow-400">6 PREMIUM</span> VARIETIES</h2>
+
+
+<div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 mt-10">
+
+<div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl overflow-hidden card-mass">
+<img src="calta.jpg" class="w-full h-48 object-cover">
+<div class="p-5"><h3 class="font-extrabold text-xl text-yellow-400">1. Catla</h3><p class="text-sm opacity-70 mt-1">Large Silver | Fast Growth - 2-3kg in 8 months</p><a href="https://wa.me/919344778626?text=Catla%20venum" class="mt-3 inline-block bg-yellow-500 text-black px-5 py-2 rounded-full text-xs font-bold btn-mass">Order Catla 🐟</a></div>
+</div>
+
+<div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl overflow-hidden card-mass">
+<img src="roghu.jpg" class="w-full h-48 object-cover">
+<div class="p-5"><h3 class="font-extrabold text-xl text-yellow-400">2. Rohu</h3><p class="text-sm opacity-70 mt-1">Golden Fish | Popular - High Demand</p><a href="https://wa.me/919344778626?text=Rohu%20venum" class="mt-3 inline-block bg-yellow-500 text-black px-5 py-2 rounded-full text-xs font-bold btn-mass">Order Rohu 🐠</a></div>
+</div>
+
+<div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl overflow-hidden card-mass">
+<img src="mirugal.jpg" class="w-full h-48 object-cover">
+<div class="p-5"><h3 class="font-extrabold text-xl text-yellow-400">3. Mirgal</h3><p class="text-sm opacity-70 mt-1">Long Silver | Disease Resistant</p><a href="https://wa.me/919344778626?text=Mirgal%20venum" class="mt-3 inline-block bg-yellow-500 text-black px-5 py-2 rounded-full text-xs font-bold btn-mass">Order Mirgal 🐡</a></div>
+</div>
+
+<div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl overflow-hidden card-mass">
+<img src="potla.jpg" class="w-full h-48 object-cover">
+<div class="p-5"><h3 class="font-extrabold text-xl text-yellow-400">4. Potla</h3><p class="text-sm opacity-70 mt-1">Small Golden Carp | Local Fav</p><a href="https://wa.me/919344778626?text=Potla%20venum" class="mt-3 inline-block bg-yellow-500 text-black px-5 py-2 rounded-full text-xs font-bold btn-mass">Order Potla 🐟</a></div>
+</div>
+
+<div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl overflow-hidden card-mass">
+<img src="cc.jpg" class="w-full h-48 object-cover">
+<div class="p-5"><h3 class="font-extrabold text-xl text-yellow-400">5. CC - Common Carp</h3><p class="text-sm opacity-70 mt-1">Bronze Carp | Economical</p><a href="https://wa.me/919344778626?text=CC%20venum" class="mt-3 inline-block bg-yellow-500 text-black px-5 py-2 rounded-full text-xs font-bold btn-mass">Order CC 🐟</a></div>
+</div>
+
+<div class="bg-white/5 backdrop-blur border border-white/10 rounded-3xl overflow-hidden card-mass">
+<img src="pulikaindai.jpg" class="w-full h-48 object-cover">
+<div class="p-5"><h3 class="font-extrabold text-xl text-yellow-400">6. Pulikaindai</h3><p class="text-sm opacity-70 mt-1">Striped Native | Hardy - Native Species</p><a href="https://wa.me/919344778626?text=Pulikaindai%20venum" class="mt-3 inline-block bg-yellow-500 text-black px-5 py-2 rounded-full text-xs font-bold btn-mass">Order Kendai 🦈</a></div>
+</div>
+
+</div>
+</section>
+
+<!-- FARM - REAL PHOTOS MASS HOVER -->
+<section id="farm" class="p-8 md:p-16 bg-green-950/20">
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl md:text-4xl font-extrabold text-center">OUR <span class="text-yellow-400">REAL FARM</span> AT SUDAMANI</h2>
+<!-- <p class="text-center mt-3 opacity-60">Un 4 real photos - hover pannu - 3D effect varum!</p> -->
+<div class="grid md:grid-cols-2 gap-8 mt-10">
+<div class="rounded-3xl overflow-hidden card-mass border border-yellow-500/20"><img src="farm-pond.jpg" class="w-full h-80 object-cover"><div class="p-4 bg-black/50"><p class="font-bold text-yellow-400">Natural Pond with Blue Cages</p></div></div>
+<div class="rounded-3xl overflow-hidden card-mass border border-yellow-500/20"><img src="farm-pond2.jpg" class="w-full h-80 object-cover"><div class="p-4 bg-black/50"><p class="font-bold text-yellow-400">Twin Ponds with Palm Trees</p></div></div>
+<div class="rounded-3xl overflow-hidden card-mass border border-yellow-500/20"><img src="delivery.jpg" class="w-full h-80 object-cover"><div class="p-4 bg-black/50"><p class="font-bold text-yellow-400">Live Delivery - Oxygen Bags</p></div></div>
+<div class="rounded-3xl overflow-hidden card-mass border border-yellow-500/20"><img src="harvesting.jpg" class="w-full h-80 object-cover"><div class="p-4 bg-black/50"><p class="font-bold text-yellow-400">Expert Harvesting Team</p></div></div>
+</div>
+</div>
+</section>
+
+<!-- LOCATION - GOOGLE MAP -->
+<section id="location" class="p-8 md:p-16 bg-[#04210c] relative overflow-hidden">
+<div class="absolute top-10 left-10 text-6xl opacity-10 float">📍</div>
+<div class="absolute bottom-10 right-10 text-5xl opacity-10 float" style="animation-delay:1s">🗺️</div>
+
+<div class="max-w-6xl mx-auto">
+<h2 class="text-3xl md:text-5xl font-extrabold text-center">FIND OUR <span class="text-yellow-400">FARM</span></h2>
+<!-- <p class="text-center mt-3 opacity-60">Sudamani la irukku - vaanga, farm ah nerla paarkalam!</p> -->
+
+<div class="grid md:grid-cols-2 gap-8 mt-10 items-center">
+
+<!-- LEFT - ADDRESS CARD -->
+<div class="bg-gradient-to-br from-yellow-500/10 to-green-600/10 rounded-3xl p-8 border border-yellow-500/20 card-mass">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-14 h-14 bg-yellow-400 rounded-full flex items-center justify-center text-2xl glow">📍</div>
+<div>
+<h3 class="font-extrabold text-xl text-yellow-400">Annamalai Meen Kunju Pannai</h3>
+<p class="text-sm opacity-70">Cuddalore No.1 Fish Farm</p>
+</div>
+</div>
+
+<div class="space-y-4 text-sm">
+<div class="flex gap-3"><span class="text-yellow-400">📌</span><p>Sudamani Village, Pinnalur Post,<br>Cuddalore District, Tamil Nadu - 607003</p></div>
+<div class="flex gap-3"><span class="text-yellow-400">📞</span><p>R.Ramesh: 9865743723<br>B.Karna: 9344778626</p></div>
+<div class="flex gap-3"><span class="text-yellow-400">⏰</span><p>Open: 6AM - 8PM (All Days)<br>Farm Visit Allowed</p></div>
+<div class="flex gap-3"><span class="text-yellow-400">🚚</span><p>Delivery: All Over Tamil Nadu<br>Same Day Delivery Available</p></div>
+</div>
+
+<div class="mt-8 flex gap-3 flex-wrap">
+<a href="https://www.google.com/maps/search/?api=1&query=Sudamani+Pinnalur+Cuddalore" target="_blank" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold text-sm btn-mass">📍 Open in Google Maps</a>
+<a href="https://wa.me/919865743723?text=Location%20anupunga%20Anna" class="border border-yellow-400/50 px-6 py-3 rounded-full font-bold text-sm btn-mass">💬 Get Location on WhatsApp</a>
+</div>
+</div>
+
+<!-- RIGHT - GOOGLE MAP -->
+<div class="rounded-3xl overflow-hidden border-2 border-yellow-500/20 card-mass h-[400px] bg-black/30">
+<iframe
+src="https://www.google.com/maps?q=Sudamani,Pinnalur,Cuddalore,Tamil+Nadu&z=14&output=embed"
+width="100%"
+height="100%"
+style="border:0;"
+allowfullscreen=""
+loading="lazy">
+</iframe>
+</div>
+
+</div>
+
+<!-- BOTTOM - 3 CARDS -->
+<div class="grid md:grid-cols-3 gap-6 mt-10 max-w-5xl mx-auto">
+<div class="bg-black/40 p-6 rounded-2xl border border-yellow-500/10 card-mass text-center">
+<div class="text-3xl">🚗</div><h3 class="font-bold mt-3 text-yellow-400">Easy to Reach</h3><p class="text-sm opacity-60 mt-1">Cuddalore to Pinnalur - 15km</p>
+</div>
+<div class="bg-black/40 p-6 rounded-2xl border border-yellow-500/10 card-mass text-center">
+<div class="text-3xl">👀</div><h3 class="font-bold mt-3 text-yellow-400">Visit Farm</h3><p class="text-sm opacity-60 mt-1">Live ponds - See before buying</p>
+</div>
+<div class="bg-black/40 p-6 rounded-2xl border border-yellow-500/10 card-mass text-center">
+<div class="text-3xl">📦</div><h3 class="font-bold mt-3 text-yellow-400">Pickup Available</h3><p class="text-sm opacity-60 mt-1">Come & collect fingerlings</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- CONTACT - MASS BUTTONS -->
+<section id="contact" class="bg-gradient-to-t from-black to-green-950 p-10 md:p-20 text-center">
+<h2 class="text-4xl md:text-5xl font-extrabold"><span class="text-yellow-400">CONTACT</span> US TODAY</h2>
+<p class="mt-4 text-lg opacity-70">Annamalai Meen Kunju Pannai, Sudamani, <br>Pinnalur, Cuddalore.</p>
+<p class="mt-2 text-2xl font-bold">R.Ramesh: 9865743723<br>B.Karna: 9344778626</p>
+<div class="mt-10 flex flex-col md:flex-row justify-center gap-6">
+<a href="https://wa.me/919344778626?text=Vanakkam%20Anna%20Meen%20Kunju%20venum" class="bg-[#25D366] px-10 py-5 rounded-full font-extrabold text-lg btn-mass">💬 WhatsApp Order</a>
+<a href="tel:9344778626" class="bg-white text-black px-10 py-5 rounded-full font-extrabold text-lg btn-mass">📞 Call Now</a>
+</div>
+<p class="mt-10 opacity-30 text-xs">© 2026 Annamalai Farm - Real Photos + Mass Animations</p>
+</section>
+
+</body>
+</html>
